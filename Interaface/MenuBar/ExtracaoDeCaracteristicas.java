@@ -1,6 +1,6 @@
-package MenuBar;
+package Interaface.MenuBar;
 
-import MenuBar.MenuItem.Desafio;
+import Interaface.MenuBar.MenuItem.Desafio;
 
 import javax.swing.JMenu;
 

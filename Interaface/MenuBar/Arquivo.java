@@ -1,8 +1,8 @@
-package MenuBar;
-import MenuBar.MenuItem.AbrirImagem;
-import MenuBar.MenuItem.Sair;
-import MenuBar.MenuItem.SalvarImagem;
-import MenuBar.MenuItem.Sobre;
+package Interaface.MenuBar;
+import Interaface.MenuBar.MenuItem.AbrirImagem;
+import Interaface.MenuBar.MenuItem.Sair;
+import Interaface.MenuBar.MenuItem.SalvarImagem;
+import Interaface.MenuBar.MenuItem.Sobre;
 
 import javax.swing.*;
 

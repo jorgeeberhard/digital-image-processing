@@ -1,10 +1,10 @@
-package MenuBar;
+package Interaface.MenuBar;
 
-import MenuBar.MenuItem.Transladar;
-import MenuBar.MenuItem.Rotacionar;
-import MenuBar.MenuItem.Espelhar;
-import MenuBar.MenuItem.Aumentar;
-import MenuBar.MenuItem.Diminuir;
+import Interaface.MenuBar.MenuItem.Transladar;
+import Interaface.MenuBar.MenuItem.Rotacionar;
+import Interaface.MenuBar.MenuItem.Espelhar;
+import Interaface.MenuBar.MenuItem.Aumentar;
+import Interaface.MenuBar.MenuItem.Diminuir;
 
 
 import javax.swing.*;

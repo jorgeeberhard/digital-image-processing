@@ -1,9 +1,9 @@
-package MenuBar;
+package Interaface.MenuBar;
 
-import MenuBar.MenuItem.Grayscale;
-import MenuBar.MenuItem.PassaAlta;
-import MenuBar.MenuItem.PassaBaixa;
-import MenuBar.MenuItem.Threshold;
+import Interaface.MenuBar.MenuItem.Grayscale;
+import Interaface.MenuBar.MenuItem.PassaAlta;
+import Interaface.MenuBar.MenuItem.PassaBaixa;
+import Interaface.MenuBar.MenuItem.Threshold;
 
 import javax.swing.JMenu;
 

@@ -1,6 +1,6 @@
-package MenuBar;
+package Interaface.MenuBar;
 
-import javax.swing.JMenuBar;
+import javax.swing.*;
 
 public class MenuBar extends JMenuBar {
     public MenuBar() {

@@ -1,9 +1,9 @@
-package MenuBar;
+package Interaface.MenuBar;
 
-import MenuBar.MenuItem.Abertura;
-import MenuBar.MenuItem.Dilatacao;
-import MenuBar.MenuItem.Erosao;
-import MenuBar.MenuItem.Fechamento;
+import Interaface.MenuBar.MenuItem.Abertura;
+import Interaface.MenuBar.MenuItem.Dilatacao;
+import Interaface.MenuBar.MenuItem.Erosao;
+import Interaface.MenuBar.MenuItem.Fechamento;
 
 import javax.swing.JMenu;
 

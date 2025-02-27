@@ -1,4 +1,4 @@
-import javax.swing.*;
+import Interaface.GUI;
 
 public class Main {
     public static void main(String[] args) {

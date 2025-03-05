@@ -1,13 +1,18 @@
-package Interaface.MenuBar.MenuItem;
+package Interface.MenuBar.MenuItem;
+
+import Interface.MainFrame;
 
 import javax.swing.JMenuItem;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Rotacionar extends JMenuItem implements ActionListener{
-    public Rotacionar() {
+    private final MainFrame mainFrame;
+    public Rotacionar(MainFrame mainFrame) {
         super("Rotacionar");
         super.addActionListener(this);
+        this.mainFrame = mainFrame;
+
     }
 
 

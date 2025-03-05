@@ -1,4 +1,4 @@
-import Interaface.GUI;
+import Interface.GUI;
 
 public class Main {
     public static void main(String[] args) {

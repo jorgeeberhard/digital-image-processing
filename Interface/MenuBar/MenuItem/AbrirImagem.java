@@ -37,6 +37,7 @@ public class AbrirImagem extends JMenuItem implements ActionListener{
             System.out.println("File selected: " + imageSelected.getAbsolutePath());
             GUI.imagePath = imageSelected.getAbsolutePath();
             try {
+                GUI.fileInput = imageSelected.getAbsoluteFile();
                 Image image = ImageIO.read(imageSelected.getAbsoluteFile());
                 GUI.imageInput = image;
                 GUI.imageOutput = image;

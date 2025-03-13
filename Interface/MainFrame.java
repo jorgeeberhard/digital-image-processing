@@ -51,10 +51,10 @@ public class MainFrame extends JFrame {
     public void updateInputPanel() {
         this.inputImageFrame.removeAll();
         this.inputImageFrame.setLayout(new BorderLayout());
-        if (GUI.imageInput != null) {
+        if (GUI.bufferedImageInput != null) {
             System.out.println("Adicionando Imagem no Input");
-            Dimension imageResizeDimensions = this.getAspectRationDimensions(GUI.imageInput.getWidth(this), GUI.imageInput.getHeight(this), 621, 1000);
-            ImageResizedPanel image = new ImageResizedPanel(GUI.imageInput, imageResizeDimensions.width, imageResizeDimensions.height, this.inputImageFrame);
+            Dimension imageResizeDimensions = this.getAspectRationDimensions(GUI.bufferedImageInput.getWidth(this), GUI.bufferedImageInput.getHeight(this), 621, 1000);
+            ImageResizedPanel image = new ImageResizedPanel(GUI.bufferedImageInput, imageResizeDimensions.width, imageResizeDimensions.height, this.inputImageFrame);
 
             this.inputImageFrame.add(image, BorderLayout.CENTER);
         }
@@ -66,10 +66,10 @@ public class MainFrame extends JFrame {
     public void updateOutputPanel() {
         this.outputImageFrame.removeAll();
         this.outputImageFrame.setLayout(new BorderLayout());
-        if (GUI.imageOutput != null) {
+        if (GUI.bufferedImageOutput != null) {
             System.out.println("Adicionando Imagem no Output");
-            Dimension imageResizeDimensions = this.getAspectRationDimensions(GUI.imageOutput.getWidth(this), GUI.imageOutput.getHeight(this), 621, 1000);
-            ImageResizedPanel image = new ImageResizedPanel(GUI.imageOutput, imageResizeDimensions.width, imageResizeDimensions.height, this.outputImageFrame);
+            Dimension imageResizeDimensions = this.getAspectRationDimensions(GUI.bufferedImageOutput.getWidth(this), GUI.bufferedImageOutput.getHeight(this), 621, 1000);
+            ImageResizedPanel image = new ImageResizedPanel(GUI.bufferedImageOutput, imageResizeDimensions.width, imageResizeDimensions.height, this.outputImageFrame);
 
             this.outputImageFrame.add(image, BorderLayout.CENTER);
         }

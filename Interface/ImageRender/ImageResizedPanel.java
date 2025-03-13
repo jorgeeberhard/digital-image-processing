@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.image.BufferedImage;
 
 public class ImageResizedPanel extends JPanel {
     private final Image image;
@@ -11,7 +12,7 @@ public class ImageResizedPanel extends JPanel {
     private final int height;
     private final JPanel imagePanel;
 
-    public ImageResizedPanel(Image image, int width, int height, JPanel imagePanel) {
+    public ImageResizedPanel(BufferedImage image, int width, int height, JPanel imagePanel) {
         this.image = image;
         this.width = width;
         this.height = height;

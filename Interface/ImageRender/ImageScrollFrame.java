@@ -1,12 +1,12 @@
 package Interface.ImageRender;
 
 import javax.swing.*;
-import java.awt.Image;
 import java.awt.Dimension;
+import java.awt.image.BufferedImage;
 
 public class ImageScrollFrame extends JFrame {
-    private final Image image;
-    public ImageScrollFrame(Image image) {
+    private final BufferedImage image;
+    public ImageScrollFrame(BufferedImage image) {
         this.image = image;
 
         ImageIcon imageIcon = new ImageIcon(image);

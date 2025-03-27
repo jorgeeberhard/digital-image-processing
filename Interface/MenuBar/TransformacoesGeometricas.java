@@ -22,4 +22,5 @@ public class TransformacoesGeometricas extends JMenu {
         super.add(new Diminuir(mainFrame));
     }
 
+
 }

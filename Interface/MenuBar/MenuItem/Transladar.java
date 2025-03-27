@@ -2,6 +2,7 @@ package Interface.MenuBar.MenuItem;
 
 import Interface.GUI;
 import Interface.MainFrame;
+import Utils.Transformar;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -44,33 +45,13 @@ public class Transladar extends JMenuItem implements ActionListener{
 
             JOptionPane.showMessageDialog(this, "Translação em X: " + xInput + "\nTranslação em Y: " + yInput);
 
+            double[][] matriz = {
+                    {1, 0, xInput},
+                    {0, 1, yInput},
+                    {0, 0, 1}
+            };
 
-            BufferedImage inputImage = GUI.bufferedImageInput;
-            int imageWidth = inputImage.getWidth();
-            int imageHeight = inputImage.getHeight();
-            int blackRGB = 0xFF000000;
-
-            BufferedImage newImage = new BufferedImage(imageWidth + xInput, imageHeight + yInput, BufferedImage.TYPE_INT_ARGB);
-
-            for(int x = 0; x < newImage.getWidth(); x++) {
-                for(int y = 0; y < newImage.getHeight(); y++){
-                    newImage.setRGB(x, y, blackRGB);
-                }
-            }
-
-            for(int x = 0; x < imageWidth; x++) {
-                for(int y = 0; y < imageHeight; y++){
-                    int newX = x + xInput;
-                    int newY = y + yInput;
-
-                    if(newX >= 0 && newY >= 0) {
-                        int rgb = inputImage.getRGB(x, y);
-
-                        newImage.setRGB(newX, newY, rgb);
-                        GUI.bufferedImageOutput = newImage;
-                    }
-                }
-            }
+            Transformar.processarMatriz(matriz);
 
             mainFrame.updateOutputPanel();
         } catch (RuntimeException exception) {

@@ -68,7 +68,7 @@ public class MainFrame extends JFrame {
         this.outputImageFrame.setLayout(new BorderLayout());
         if (GUI.bufferedImageOutput != null) {
             System.out.println("Adicionando Imagem no Output");
-            Dimension imageResizeDimensions = this.getAspectRationDimensions(GUI.bufferedImageOutput.getWidth(this), GUI.bufferedImageOutput.getHeight(this), 621, 1000);
+            Dimension imageResizeDimensions = this.getAspectRationDimensions(GUI.bufferedImageOutput.getWidth(this), GUI.bufferedImageOutput.getHeight(this), 621, 600);
             ImageResizedPanel image = new ImageResizedPanel(GUI.bufferedImageOutput, imageResizeDimensions.width, imageResizeDimensions.height, this.outputImageFrame);
 
             this.outputImageFrame.add(image, BorderLayout.CENTER);

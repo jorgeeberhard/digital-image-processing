@@ -16,6 +16,14 @@ public class Transformar {
         int newImageWidth = (int) ((imageWidth + matriz[0][2]) * matriz[0][0]);
         int newImageHeight = (int) ((imageHeight + matriz[1][2]) * matriz[1][1]);
 
+        if(newImageHeight < 0) {
+            newImageHeight = -newImageHeight;
+        }
+
+        if(newImageWidth < 0) {
+            newImageWidth = -newImageWidth;
+        }
+
         if((matriz[0][1] != 0) || (matriz[1][0] != 0)) {
             double angle = Math.atan2(matriz[1][0], matriz[0][0]); // Extraindo o ângulo de rotação
             double cosTheta = Math.cos(angle);
@@ -51,7 +59,13 @@ public class Transformar {
 
         }
 
-        System.out.println("Image Width: " + matriz[0][0] + " Image Height: " + matriz[1][1]);
+        for(int i = 0; i < matriz.length; i++) {
+            for(int j = 0; j < matriz[i].length; j++) {
+                System.out.printf("{%s} ", matriz[i][j]);
+            }
+            System.out.printf("\n");
+        }
+
         BufferedImage newImage = new BufferedImage(newImageWidth, newImageHeight, BufferedImage.TYPE_INT_ARGB);
 
 

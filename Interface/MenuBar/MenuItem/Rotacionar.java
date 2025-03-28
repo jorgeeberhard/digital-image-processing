@@ -42,38 +42,6 @@ public class Rotacionar extends JMenuItem implements ActionListener{
                 }
             } while (!validInput);
 
-            /*
-            BufferedImage newImage = new BufferedImage(imageWidth, imageHeight, BufferedImage.TYPE_INT_ARGB);
-
-            for(int x = 0; x < imageWidth; x++) {
-                for(int y = 0; y < imageHeight; y++){
-                    newImage.setRGB(x, y, blackRGB);
-                }
-            }
-
-            double radians = Math.toRadians(angle);
-            double cosTheta = Math.cos(radians);
-            double sinTheta = Math.sin(radians);
-
-            int xCenter = imageWidth / 2;
-            int yCenter = imageHeight / 2;
-            for(int x = 0; x < imageWidth; x++) {
-                for(int y = 0; y < imageHeight; y++){
-                    int xRelative = x - xCenter;
-                    int yRelative = y - yCenter;
-
-                    int newX = (int) (cosTheta * xRelative - sinTheta * yRelative + xCenter);
-                    int newY = (int) (sinTheta * xRelative + cosTheta * yRelative + yCenter);
-
-                    if(newX >= 0 && newX < imageWidth && newY >= 0 && newY < imageHeight) {
-                        int rgb = inputImage.getRGB(x, y);
-                        newImage.setRGB(newX, newY, rgb);
-                    }
-                }
-            }
-            GUI.bufferedImageOutput = newImage;
-             */
-
             double[][] matriz = {
                     {Math.cos(Math.toRadians(angle)), -Math.sin(Math.toRadians(angle)), 0},
                     {Math.sin(Math.toRadians(angle)), Math.cos(Math.toRadians(angle)), 0},

@@ -27,10 +27,6 @@ public class Rotacionar extends JMenuItem implements ActionListener{
 
             int angle = 0;
             boolean validInput = false;
-            BufferedImage inputImage = GUI.bufferedImageInput;
-            int imageWidth = GUI.bufferedImageInput.getWidth();
-            int imageHeight = GUI.bufferedImageInput.getHeight();
-            int blackRGB = 0xFF000000;
 
             do {
                 try {

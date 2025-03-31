@@ -27,7 +27,6 @@ public class Espelhar extends JMenuItem implements ActionListener{
             }
 
             boolean validInput = false;
-            double multiplicadorTamanho = 0;
 
             boolean orientacaoHorizontal = false;
 

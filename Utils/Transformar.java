@@ -24,7 +24,12 @@ public class Transformar {
             newImageWidth = -newImageWidth;
         }
 
+        boolean transladar = false;
+        if ((matriz[0][2] != 0) || (matriz[1][2] != 0)) {
+            transladar = true;
+        }
         if((matriz[0][1] != 0) || (matriz[1][0] != 0)) {
+
             double angle = Math.atan2(matriz[1][0], matriz[0][0]); // Extraindo o ângulo de rotação
             double cosTheta = Math.cos(angle);
             double sinTheta = Math.sin(angle);
@@ -107,8 +112,13 @@ public class Transformar {
                 int origemY = (int) (invC * xRelative + invD * yRelative + invTy);
 
 
-                origemX += xOldCenter;
-                origemY += yOldCenter;
+                if (transladar) {
+                    origemX += xCenter;
+                    origemY += yCenter;
+                } else {
+                    origemX += xOldCenter;
+                    origemY += yOldCenter;
+                }
 
                 if(origemX >= 0 && origemX < imageWidth && origemY >= 0 && origemY < imageHeight) {
                     int rgb = inputImage.getRGB(origemX, origemY);
